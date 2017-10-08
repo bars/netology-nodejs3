@@ -30,7 +30,7 @@ function handler(req, res) {
                     response.on('end', () => {
                         yData = JSON.parse(yData);
                         res.writeHead(200,'OK', {'Content-Type': 'text/html;charset=utf-8'});
-                        res.write(yData.text.toString());
+                        res.write(`${yData.text}`);
                         res.end();
                 });
             });
